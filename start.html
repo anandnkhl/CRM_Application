@@ -1,25 +1,17 @@
 <html>
 	<head>
-		<title> Login </title>
+		<title>User Login </title>
 		<link rel="stylesheet" type="text/css" href="start.css">
 	</head>
 	<body>
 	<br>
 	<br>
-	<form method="GET" action="EventRegistrationRedirected.html">
+	<form method="POST" action="http://127.0.0.1:8080/verifyUser">
 		<fieldset>
-			<legend><b> Personal Information: </b></legend><br>
-			First Name: <input type="text" name="firstname" size="10" placeholder="required" required><br>
-			Last Name: 	<input type="text" name="lastname" size="10" placeholder="optional"><br>
-			SAP Id:     <input type="text" name="SAP Id" size="9" placeholder="required" required><br>
-			Select your Branch:
-			<select name="Branch">
-				<option value="none">select one</option>
-				<option value="CCVT">CCVT</option>
-				<option value="CSIF">CSIF</option>
-				<option value="MFT">MFT</option>
-				<option value="OSS">OSS</option>
-			</select>
+			<legend><b> Enter detail to login: </b></legend><br>
+			User Id:     <input type="text" name="UserId" size="9" placeholder="required" required><br>
+			Password: <input type="Password" name="Password" size="9" placeholder="required" required><br>
+			
 
 			<br><br>
 			<input type="submit" value="Yes, Submit"/>

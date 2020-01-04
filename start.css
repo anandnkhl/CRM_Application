@@ -1,9 +1,13 @@
 body {
-    background-image: url("https://usercontent1.hubstatic.com/7886634_f1024.jpg");
+    background-image: url("https://www.123freevectors.com/wp-content/original/142192-blue-and-white-professional-background.jpg");
 	text-align: center;
 }
 form {
-	background-color:lightgreen;
+	background-color:lightgrey;
+	padding-top: 10px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	padding-left: 30px;
 }
 
 .abc {
