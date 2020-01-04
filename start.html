@@ -3,10 +3,16 @@
 		<title>User Login </title>
 		<link rel="stylesheet" type="text/css" href="start.css">
 	</head>
-	<body>
+	<body style = "background-image: url('https://www.123freevectors.com/wp-content/original/142192-blue-and-white-professional-background.jpg'); text-align: center;">
+
 	<br>
 	<br>
-	<form method="POST" action="http://127.0.0.1:8080/verifyUser">
+	<form method="POST" action="http://127.0.0.1:8080/verifyUser" style ="
+	background-color:lightgrey;
+	padding-top: 10px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	padding-left: 30px;">
 		<fieldset>
 			<legend><b> Enter detail to login: </b></legend><br>
 			User Id:     <input type="text" name="UserId" size="9" placeholder="required" required><br>
@@ -19,5 +25,6 @@
 		</fieldset>
 
 	</form>
+	<a href="./register.html">Register new user here</a>
  </body>
 </html>
