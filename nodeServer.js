@@ -60,6 +60,30 @@ app.post('/addUser', function(req, res) {
 });
 
 
+//To register Customer in database
+app.post('/addCustomer', function(req, res) {
+     var CID = parseInt(req.body.UserId, 10);
+     var Name = req.body.Name;
+     var Email = req.body.Email;
+     var Phone = parseInt(req.body.Phone, 10);
+     var Address = req.body.Address;
+     var Status = req.body.Status;
+     var query = {"CID":CID,"Name":Name,"Email":Email,"Phone":Phone,"Address":Address, "Status":Status }
+     mongo.connect(url,  {
+          useNewUrlParser: true, useUnifiedTopology: true
+          },function(err, db){
+               if (err) throw err;
+               var dbo = db.db("CRMDatabase");
+               dbo.collection("CRMCustomer").insertOne(query, function(err, result) {
+                    if (err) throw err;
+                    console.log("1 Customer Added; Redirecting to dashboard");
+                    db.close();
+                    return res.sendFile( __dirname + '/dashboard.html');
+               });
+     });
+});
+
+
 //To open start page(login page) with both get and post request http://127.0.0.1:8080/startUser
 app.get('/startUser', function(req, res){
      return res.sendFile( __dirname + '/start.html');
