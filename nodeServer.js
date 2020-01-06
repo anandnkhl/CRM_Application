@@ -30,7 +30,7 @@ app.post('/verifyUser', function(req, res) {
                          return res.redirect('/startUser');
                     }else if(verified == "yes"){
                          console.log('User login successfull, moved to dashboard');
-                         return res.sendFile( __dirname + '/dashboard.html');
+                         return res.sendFile( __dirname + '/FrontEnd/dashboard.html');
                     }
                });
      });
@@ -54,7 +54,7 @@ app.post('/addUser', function(req, res) {
                     if (err) throw err;
                     console.log("1 User Added; Redirecting to login page");
                     db.close();
-                    return res.redirect( './startUser');
+                    return res.redirect('./startUser');
                });
      });
 });
@@ -62,7 +62,7 @@ app.post('/addUser', function(req, res) {
 
 //To register Customer in database
 app.post('/addCustomer', function(req, res) {
-     var CID = parseInt(req.body.UserId, 10);
+     var CID = parseInt(req.body.CustomerId, 10);
      var Name = req.body.Name;
      var Email = req.body.Email;
      var Phone = parseInt(req.body.Phone, 10);
@@ -78,7 +78,7 @@ app.post('/addCustomer', function(req, res) {
                     if (err) throw err;
                     console.log("1 Customer Added; Redirecting to dashboard");
                     db.close();
-                    return res.sendFile( __dirname + '/dashboard.html');
+                    return res.sendFile( __dirname + '/FrontEnd/dashboard.html');
                });
      });
 });
@@ -86,21 +86,25 @@ app.post('/addCustomer', function(req, res) {
 
 //To open start page(login page) with both get and post request http://127.0.0.1:8080/startUser
 app.get('/startUser', function(req, res){
-     return res.sendFile( __dirname + '/start.html');
+     return res.sendFile( __dirname + '/FrontEnd/start.html');
 });
 app.post('/startUser', function(req, res){
-     return res.sendFile( __dirname + '/start.html');
+     return res.sendFile( __dirname + '/FrontEnd/start.html');
 });
 
 
 //To open registration page with both get and post request at http://127.0.0.1:8080/registerUser
 app.post('/registerUser', function(req, res){
-     return res.sendFile(__dirname + '/registration.html');
+     return res.sendFile(__dirname + '/FrontEnd/registration.html');
 });
 app.get('/registerUser', function(req, res){
-     return res.sendFile(__dirname + '/registration.html');
+     return res.sendFile(__dirname + '/FrontEnd/registration.html');
 });
 
+//To open registration page with request at http://127.0.0.1:8080/registerUser
+app.post('/registerUser', function(req, res){
+     return res.sendFile(__dirname + '/FrontEnd/registrationCustomer.html');
+});
 
 
 //Run the server at port 8080
