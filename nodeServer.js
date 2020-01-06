@@ -101,8 +101,8 @@ app.get('/registerUser', function(req, res){
      return res.sendFile(__dirname + '/FrontEnd/registration.html');
 });
 
-//To open registration page with request at http://127.0.0.1:8080/registerUser
-app.post('/registerUser', function(req, res){
+//To open registration page with request at http://127.0.0.1:8080/registerCustomer
+app.post('/registerCustomer', function(req, res){
      return res.sendFile(__dirname + '/FrontEnd/registrationCustomer.html');
 });
 

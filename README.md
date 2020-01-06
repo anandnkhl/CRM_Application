@@ -29,5 +29,6 @@ npm install body-parser
 ```
 <br>4. Run the Application at:
 ```bash
+> node nodeServer
 http://127.0.0.1:8080/startUser
 ```
