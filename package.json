@@ -1,0 +1,25 @@
+{
+  "name": "crm_application",
+  "version": "1.0.0",
+  "description": "<br>To run this appliction: <br>1. Install MongoDB and start MongoDB Server at 127.0.0.1:27017 ```bash sudo apt-get update sudo apt-get install -y mongodb-org ``` ```bash sudo service mongod start ```",
+  "main": "nodeServer.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anandnkhl/CRM_Application.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anandnkhl/CRM_Application/issues"
+  },
+  "homepage": "https://github.com/anandnkhl/CRM_Application#readme"
+}
