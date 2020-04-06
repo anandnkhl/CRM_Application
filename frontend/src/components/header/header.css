@@ -1,0 +1,8 @@
+.navbar {
+    background-color: #272b28 !important;
+    position: relative;
+    top: 0;
+    width: 100%;
+    display: flex;
+    padding :.5rem 1rem;
+}
