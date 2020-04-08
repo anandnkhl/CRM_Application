@@ -2,13 +2,13 @@ import React from 'react';
 import './App.css';
 import Dashboard from './components/dashboard/dashboard.js'
 import Header from './components/header/header.js'
-import {HashRouter, Switch, Route} from 'react-router-dom';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 const App = () => {
   return(
     <div className = "App">
       <Header />
-      <HashRouter>
+      <BrowserRouter>
         <Switch>
           <Route
             exact path = "/dashboard"
@@ -19,7 +19,7 @@ const App = () => {
             component = {Dashboard}
           />          
         </Switch>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   )
 }
