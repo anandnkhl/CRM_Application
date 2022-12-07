@@ -4,8 +4,8 @@
   "description": "<br>To run this appliction: <br>1. Install MongoDB and start MongoDB Server at 127.0.0.1:27017 ```bash sudo apt-get update sudo apt-get install -y mongodb-org ``` ```bash sudo service mongod start ```",
   "main": "nodeServer.js",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
     "mongodb": "^3.5.5"
   },
   "devDependencies": {},
